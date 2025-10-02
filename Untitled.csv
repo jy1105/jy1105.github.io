@@ -1,0 +1,43 @@
+Subject,Predicate,Object,Predicate*,Object*,비고
+# === 기본 정보 ===
+person_MinYeonghwan,rdf:type,bioc:Person,dc:creator,이재열,
+person_MinYeonghwan,rdfs:label,"민영환"@ko,dc:creator,이재열,
+person_MinYeonghwan,rdfs:label,"閔泳煥"@hanja,dc:creator,이재열,
+# === 별칭 정보 (본관, 자, 호) ===
+person_MinYeonghwan,kbdb:clanOrigin,"여흥"@ko,dc:creator,이재열,"'본관'을 kbdb 커스텀 프로퍼티로 지정"
+person_MinYeonghwan,kbdb:clanOrigin,"여흥"@ko,kbdb:certainty,9,
+person_MinYeonghwan,kbdb:clanOrigin,"여흥"@ko,dc:source,https://encykorea.aks.ac.kr/Article/E0020206,
+person_MinYeonghwan,kbdb:clanOrigin,"驪興"@hanja,dc:creator,이재열,
+person_MinYeonghwan,kbdb:clanOrigin,"驪興"@hanja,kbdb:certainty,9,
+person_MinYeonghwan,kbdb:clanOrigin,"驪興"@hanja,dc:source,https://encykorea.aks.ac.kr/Article/E0020206,
+person_MinYeonghwan,skos:altLabel,"문약"@ko,dc:creator,이재열,"'자'를 SKOS의 대체 레이블로 지정"
+person_MinYeonghwan,skos:altLabel,"문약"@ko,kbdb:certainty,9,
+person_MinYeonghwan,skos:altLabel,"문약"@ko,dc:source,https://encykorea.aks.ac.kr/Article/E0020206,
+person_MinYeonghwan,skos:altLabel,"文若"@hanja,dc:creator,이재열,
+person_MinYeonghwan,skos:altLabel,"계정"@ko,dc:creator,이재열,"'호'를 SKOS의 대체 레이블로 지정"
+person_MinYeonghwan,skos:altLabel,"桂庭"@hanja,dc:creator,이재열,
+# === 생애 이벤트 (출생, 사망) ===
+person_MinYeonghwan,bioc:was_born,event_birth_MinYeonghwan,dc:creator,이재열,"'출생'을 BioCRM의 was_born 이벤트로 연결"
+event_birth_MinYeonghwan,crm:P4_has_time-span,time_1861-11-21,dc:creator,이재열,
+time_1861-11-21,crm:P82_at_some_time_within,"1861-11-21"^^xsd:date,dc:creator,이재열,
+event_birth_MinYeonghwan,crm:P7_took_place_at,place_Hanseong,dc:creator,이재열,
+person_MinYeonghwan,bioc:died,event_death_MinYeonghwan,dc:creator,이재열,"'사망'을 BioCRM의 died 이벤트로 연결"
+event_death_MinYeonghwan,crm:P4_has_time-span,time_1905-11-30,dc:creator,이재열,
+time_1905-11-30,crm:P82_at_some_time_within,"1905-11-30"^^xsd:date,dc:creator,이재열,
+event_death_MinYeonghwan,crm:P7_took_place_at,place_Hanseong,dc:creator,이재열,
+# === 가족 관계 ===
+person_MinYeonghwan,fam:hasFather,person_MinGyeomho,dc:source,https://encykorea.aks.ac.kr/Article/E0020206,"'아버지'를 hasFather로 지정"
+person_MinYeonghwan,fam:hasMother,person_LadySeo,kbdb:certainty,7,"어머니 이름 미상, '서씨'로만 기록"
+person_MinYeonghwan,fam:hasAdoptedSon,person_MinJeongsig,dc:source,https://encykorea.aks.ac.kr/Article/E0020206,"'양자'를 hasAdoptedSon으로 지정"
+# === 사회적 이벤트 (과거, 종묘배향) ===
+person_MinYeonghwan,bioc:participated_in,event_gwageo_1879,dc:creator,이재열,"'과거'를 '참여' 이벤트로 변경"
+event_gwageo_1879,rdf:type,kbdb:GwageoExamination,dc:creator,이재열,"과거 시험 이벤트 타입 정의"
+event_gwageo_1879,crm:P4_has_time-span,time_1879,dc:creator,이재열,
+time_1879,crm:P82_at_some_time_within,"1879"^^xsd:gYear,dc:creator,이재열,
+person_MinYeonghwan,bioc:participated_in,activity_baehyang_gojong_1921,dc:creator,이재열,"종묘배향을 '참여' 이벤트로 추가 (인물 중심)"
+activity_baehyang_gojong_1921,rdf:type,kbdb:JongmyoBaehyang,dc:creator,이재열,"종묘배향 이벤트 타입 정의"
+activity_baehyang_gojong_1921,rdfs:label,"고종묘 종묘배향 (1921년)"@ko,dc:creator,이재열,
+activity_baehyang_gojong_1921,crm:P11_had_participant,person_MinYeonghwan,dc:creator,이재열,"이벤트 중심의 서술 유지"
+activity_baehyang_gojong_1921,crm:P11_had_participant,person_MinYeonghwan,kbdb:certainty,8,
+activity_baehyang_gojong_1921,crm:P11_had_participant,person_MinYeonghwan,dc:source,https://sillok.history.go.kr/id/kzc_11403031_004,
+activity_baehyang_gojong_1921,crm:P14_was_carried_out_by,person_Sunjong,dc:source,https://sillok.history.go.kr/id/kzc_11403031_004,
